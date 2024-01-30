@@ -1,0 +1,139 @@
+.second__section {
+    max-width: 1200px;
+    padding: 0 50px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &-imagem {
+        width: 40%;
+        height: 100%;
+    }
+
+    &-conteudo {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+
+        h3 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: $cor-primaria;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: $cor-secundaria;
+            font-weight: 800;
+        }
+
+        p {
+            font-size: 1rem;
+            font-weight: 400;
+            color: $cor-secundaria;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            li {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+
+                i {
+                    color: $cor-primaria;
+                }
+
+                p {
+                    font-size: 1rem;
+                    color: $cor-secundaria;
+                }
+            }
+        }
+
+        a {
+            @include a-default ($cor-primaria, $cor-branco, 200px);
+            z-index: 999;
+        }
+
+        a:hover {
+            background-color: $cor-secundaria;
+            color: $cor-primaria;
+        }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .second__section {
+        max-width: 100%;
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+
+        &-imagem {
+            width: 90%;
+            height: 80%;
+        }
+
+        &-conteudo {
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+
+            h2 {
+                @include h2-mobile;
+            }
+
+            p {
+                font-size: 1rem;
+                font-weight: 400;
+                color: $cor-secundaria;
+            }
+
+            ul {
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                li {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+
+                    i {
+                        color: $cor-primaria;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                        color: $cor-secundaria;
+                    }
+                }
+            }
+
+            a {
+                @include a-mobile ($cor-primaria, $cor-branco, 200px);
+                z-index: 999;
+            }
+
+            a:hover {
+                background-color: $cor-secundaria;
+                color: $cor-primaria;
+            }
+        }
+    }
+}

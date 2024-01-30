@@ -1,0 +1,123 @@
+.fifth__section {
+    max-width: 100%;
+    margin: 30px auto;
+    margin-top: 50px;
+    padding: 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $cor-secundaria;
+
+    &-all {
+        margin: 0 auto;
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+
+        &-content {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            h2 {
+                font-size: 2rem;
+                color: $cor-branco;
+                font-weight: 800;
+            }
+
+            p {
+                font-size: 1.2rem;
+                color: $cor-branco;
+                font-weight: 400;
+            }
+        }
+
+        &-link {
+            display: flex;
+            justify-content: center;
+            width: 40%;
+
+            a {
+                width: 300px;
+                text-align: center;
+                text-decoration: none;
+                text-transform: uppercase;
+                padding: 10px 20px;
+                border-radius: 10px;
+                background-color: $cor-primaria;
+                color: $cor-branco;
+                font-size: 1.2rem;
+                font-weight: 500;
+                transition: .5s;
+                z-index: 999;
+
+                &:hover {
+                    background-color: $cor-branco;
+                    color: $cor-primaria;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    .fifth__section {
+        max-width: 100%;
+        margin: 10px auto;
+        margin-top: 50px;
+        padding: 50px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: $cor-secundaria;
+
+        &-all {
+            margin: 0 auto;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 20px;
+            align-items: center;
+
+            &-content {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                h2 {
+                    @include h2-mobile;
+                    color: $cor-branco;
+                }
+
+                p {
+                    font-size: 1.2rem;
+                    color: $cor-branco;
+                    font-weight: 400;
+                }
+            }
+
+            &-link {
+                display: flex;
+                justify-content: center;
+                width: 50%;
+
+                a {
+                    @include a-mobile ($cor-primaria, $cor-branco, 300px);
+
+                    &:hover {
+                        background-color: $cor-branco;
+                        color: $cor-primaria;
+                    }
+                }
+            }
+        }
+
+    }
+}
